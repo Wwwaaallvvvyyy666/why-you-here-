@@ -8,7 +8,7 @@ local MarketplaceService = game:GetService("MarketplaceService")
 local Lighting = game:GetService("Lighting")
 
 local gameScripts = {
-    [121864768012064] = "https://pandadevelopment.net/virtual/file/416dabb62a0b6878"
+    [121864768012064] = "https://pandadevelopment.net/virtual/file/835289ad1d1bc9c5"
 }
 
 local currentGameId = game.PlaceId
