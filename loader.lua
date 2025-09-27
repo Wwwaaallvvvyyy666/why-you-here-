@@ -2,6 +2,7 @@ print("[Walvy Community] Loading Script......")
 
 local gameScripts = {
     [121864768012064] = "https://raw.githubusercontent.com/Walvy666/Fish-It/main/Walvy-Community", -- Fish It
+    [127742093697776] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/Plant-vs-Brainrot/main/here.lua", -- Plant Vs Brainrot
 }
 
 local currentGameId = game.PlaceId
