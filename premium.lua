@@ -20,7 +20,7 @@ if scriptUrl then
     print("Game Successfully Detected: " .. gameName)
     print("Running Script......")
 
-    buatNotifikasi("Walvy Community", gameName .. " ✅ Successfully loaded")
+    buatNotifikasi("Walvy Community", gameName .. "   ✅  Successfully loaded")
 
     pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
