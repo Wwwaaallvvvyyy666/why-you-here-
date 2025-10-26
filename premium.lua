@@ -1,7 +1,7 @@
 print("[Walvy Community Premium] Loading Script......")
 
 local gameScripts = {
-    [121864768012064] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/Fishit/main/connection%20to.lua", -- Fish It
+    [121864768012064] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/why-you-here-/refs/heads/main/premium/hwid.lua", -- Fish It
 }
 
 local currentGameId = game.PlaceId
