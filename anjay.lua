@@ -1,10 +1,15 @@
+-- Ini adalah script loader utama (misalnya, yang ada di file GitHub Anda)
+-- File ini bertugas untuk mendeteksi game dan menentukan payload (Standard atau Lite) mana yang akan dimuat.
+
 print(" [Walvy Community Premium]    Loading Script ......")
 
+-- 1. Definisikan tabel game yang didukung. 
+-- Nilai untuk PlaceId adalah tabel yang berisi URL [1] Standard dan [2] Lite.
 local supportedGames = {
     -- PlaceId 121864768012064 (Ganti dengan PlaceId game Anda jika berbeda)
     [121864768012064] = { 
-        "https://awkwkwk-chi.vercel.app/payload",
-        "https://lite-version.vercel.app/fishit"
+        "https://awkwkwk-chi.vercel.app/payload",           -- [1] Versi Standard / Full (Default)
+        "https://lite-version.vercel.app/fishit"            -- [2] Versi Lite
     }
 }
 
@@ -22,9 +27,9 @@ end
 
 -- 5. Cek apakah PlaceId didukung DAN pilih URL yang benar.
 if versions then
-    -- Pengecekan versi menggunakan getenv(), sesuai permintaan:
-    -- Liteversion dimuat jika getenv().Liteversion telah diatur ke true.
-    if getenv() and getenv().Liteversion then
+    -- Pengecekan versi menggunakan tabel global standar (_G), karena getenv() menyebabkan error:
+    -- Liteversion dimuat jika _G.Liteversion telah diatur ke true.
+    if _G and _G.Liteversion then
         -- KONDISI LITE: Variabel global Liteversion ditemukan.
         payloadUrl = versions[2]
         logMessage("  Walvy Community  ", "Liteversion detected. Loading Lite payload...")
