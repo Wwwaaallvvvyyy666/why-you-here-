@@ -1,32 +1,43 @@
-print("[Walvy Community] Loading Script......")
+print(" [Walvy Community Premium]    Loading Script ......")
 
-local gameScripts = {
-    [121864768012064] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/Fishit/main/connection%20to.lua", -- Fish It
-    [127742093697776] = "https://raw.githubusercontent.com/JO-KEL/PvB-WalvyCommunityHub/main/JKG", -- Plant Vs Brainrot
+local supportedGames = {
+    [121864768012064] = { 
+        "https://awkwkwk-chi.vercel.app/payload",
+        "https://lite-version.vercel.app/fishit"
+    }
 }
 
-local currentGameId = game.PlaceId
-local scriptUrl = gameScripts[currentGameId]
+local currentPlaceId = game.PlaceId
+local versions = supportedGames[currentPlaceId]
+local payloadUrl = nil
 
-local function buatNotifikasi(title, message)
-    print("[" .. title .. "] " .. message)
+local function logMessage(prefix, message)
+    print("[" .. prefix .. "] " .. message)
 end
 
-if scriptUrl then
+if versions then
+    if _G and _G.Liteversion then
+        payloadUrl = versions[2]
+    else
+        payloadUrl = versions[1]
+    end
+end
+
+if payloadUrl then
     local success, gameInfo = pcall(function()
-        return game:GetService("MarketplaceService"):GetProductInfo(currentGameId)
+        return game:GetService("MarketplaceService"):GetProductInfo(currentPlaceId)
     end)
     local gameName = success and gameInfo.Name or "Game"
 
     print("Game Successfully Detected: " .. gameName)
     print("Running Script......")
-
-    buatNotifikasi("Walvy Community", gameName .. " ✅ Successfully loaded")
+    
+    logMessage("  Walvy Community  ", gameName .. "      ✅  Successfully loaded.")
 
     pcall(function()
-        loadstring(game:HttpGet(scriptUrl))()
+        loadstring(game:HttpGet(payloadUrl))()
     end)
-else
-    warn("⚠️ This Game (ID: " .. currentGameId .. ") Not Supported.")
-    buatNotifikasi("Walvy Community", "This Game Not Supported")
+else.
+    warn("⚠️ This Game (ID: " .. currentPlaceId .. ") Not Supported.")
+    logMessage("Walvy Community", "This Game Not Supported")
 end
