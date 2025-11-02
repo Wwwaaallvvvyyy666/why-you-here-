@@ -37,7 +37,7 @@ if payloadUrl then
     pcall(function()
         loadstring(game:HttpGet(payloadUrl))()
     end)
-else.
+else
     warn("⚠️ This Game (ID: " .. currentPlaceId .. ") Not Supported.")
     logMessage("Walvy Community", "This Game Not Supported")
 end
