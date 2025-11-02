@@ -2,7 +2,7 @@ print("[Walvy Community] Loading Script......")
 
 local gameScripts = {
     [121864768012064] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/Fishit/main/connection%20to.lua", -- Fish It
-    [127742093697776] = "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/Plant-vs-Brainrot/main/here.lua", -- Plant Vs Brainrot
+    [127742093697776] = "https://raw.githubusercontent.com/JO-KEL/PvB-WalvyCommunityHub/main/JKG", -- Plant Vs Brainrot
 }
 
 local currentGameId = game.PlaceId
