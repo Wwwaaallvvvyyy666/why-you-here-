@@ -2,7 +2,7 @@ print(" [Walvy Community Premium]    Loading Script ......")
 
 local supportedGames = {
     [121864768012064] = { 
-        "https://raw.githubusercontent.com/Wwwaaallvvvyyy666/ngetes/refs/heads/main/gtt.lua",
+        "https://awkwkwk-chi.vercel.app/payload",
         "https://lite-version.vercel.app/fishit"
     }
 }
