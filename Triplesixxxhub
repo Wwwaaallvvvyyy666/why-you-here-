@@ -92,7 +92,7 @@ local Icons = {
     map      = "rbxassetid://115690060447581",
     home      = "rbxassetid://135016593915894",
     fishing      = "rbxassetid://82305997222115",
-    fishings      = "rbxassetid://138346127823850",
+    fishings      = "rbxassetid://74455513763045",
 }
 
 local UserInputService = game:GetService("UserInputService")
