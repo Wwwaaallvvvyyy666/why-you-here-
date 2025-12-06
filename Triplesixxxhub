@@ -1,4 +1,3 @@
-
 local HttpService = game:GetService("HttpService")
 
 if not isfolder("Triplesixxx") then
@@ -93,6 +92,7 @@ local Icons = {
     map      = "rbxassetid://115690060447581",
     home      = "rbxassetid://135016593915894",
     fishing      = "rbxassetid://82305997222115",
+    fishings      = "rbxassetid://138346127823850",
 }
 
 local UserInputService = game:GetService("UserInputService")
